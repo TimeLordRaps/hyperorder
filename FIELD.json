@@ -1,0 +1,28 @@
+{
+  "field_id": "hyperorder",
+  "contract_version": "0.1.0",
+  "classification": "FRAME",
+  "module": "hyperorder",
+  "exports": [
+    "Sense",
+    "SENSES",
+    "resolve_sense",
+    "Statement",
+    "REALIGNMENT",
+    "Verdict",
+    "Precedes",
+    "Incomparable",
+    "Order",
+    "compare"
+  ],
+  "scope": "Hyperorder's declared sense, the dichrome closed into one form, held apart from plain order; and the ordinal bookkeeping a finite claim about order must pass: named positions, declared relations, five verdicts, and a missing relation read as UNKNOWN.",
+  "exclusions": [
+    "This module does not implement hyperorder; the dichrome and its closure are Hypergrammar's.",
+    "'order' is not aliased to 'hyperorder'; whether the order chaos realigns into is hyperorder is not decided.",
+    "No grounding of hyperorder in Hyperethics, or in anything else, is assumed.",
+    "No position is a number, and no clock, index, duration, or step count is used; ordering among reality presentations belongs to Hypertime.",
+    "No operational target, attractor, or stable state is called hyperorder.",
+    "No physical, cosmological, or ethical claim is established."
+  ],
+  "verifier_status": "NOT_CHECKED"
+}
