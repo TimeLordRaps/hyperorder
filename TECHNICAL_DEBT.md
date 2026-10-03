@@ -17,6 +17,8 @@
 | HO-013 | Family convergence is finite and universally quantified over declared branches only; L3 limit continuation is uncovered. | OPEN | A source-grounded ordinal/limit transport argument with explicit successor and limit counterexamples. |
 | HO-014 | Hyperchaos's divergent families have no implemented pinned extraction adapter into this model. | OPEN | Define and independently check profile transport between the two fields after sibling interfaces settle. |
 | HO-015 | Tyler's 2026-10-03 convergence direction is established as an association, but identity with the native dichrome is not established. | OPEN | A native derivation connecting divergent-family reconciliation to dichrome self-description; ordinary merging is an insufficient witness. |
+| HO-016 | The first implementation omitted the published off-branch `~=` architecture and reported only the concrete diagnostics. | RESOLVED within FRAME | Typed selected-path projection, explicit retained/forgotten constraints and guarded original-path replay are implemented; the 79-test full suite and exact wheel/console gates validate the finite correction. Native adequacy is a separate obligation (HO-017). |
+| HO-017 | Paired schema equality and exact path recovery do not establish native `~=` or promote native `==`. The public Lean prototype's retrace assumes the semantic conclusion, and the pinned public L2 has no abstraction clause. | OPEN | A published path-domain source coordinate and independent native projection/retrace adequacy proof. Never use an is-valid flag, source hash alone or the semantic conclusion itself as promotion evidence. |
 
 Checkpoint 1 on 2026-09-30 inspected the sense discipline, which is the hotspot:
 `order` must not resolve to `hyperorder`, and the 2026-09-30 statement must stay
@@ -49,15 +51,43 @@ bookkeeping. HO-001 is advanced by the live convergence direction, while
 its remaining native identity obligation is retained as HO-015. No earlier
 uncertainty is treated as proof merely because executable mechanisms exist.
 
-The checkpoint-7 rotating audit is still due. No new random draw replaces
-the recorded interval. Full-suite evidence is bound to the current source
+At that development checkpoint the checkpoint-7 rotating audit was due.
+The subsequent integrated audit below discharges that gate. Full-suite evidence is bound to the current source
 selection in the development receipt; a commit alone does not preserve it
 if the files change.
 
 Checkpoint 4 completed the 54-test full native suite and exact wheel/source
 binding, including a rejected stale wheel and independently imported wheel
-CLI PASS/FAIL/UNKNOWN variants. No tests were skipped. The due audit remains
-checkpoint 7. The build environment emitted a deprecated wheel-command
+CLI PASS/FAIL/UNKNOWN variants. No tests were skipped. Checkpoint 7 was the
+next audit then; the later audit below supersedes that due state. The build environment emitted a deprecated wheel-command
 location warning; replacing the user's environment tooling is deferred to
 the next packaging-environment maintenance task, rather than silently
 installing dependencies during this bounded field development.
+
+## Quadrilateral correction and inherited audit continuity
+
+The integrated checkpoint-7 audit inspected interpretation-bound recovery
+and the prior ordinal surface using 3,072 independent comparisons. It
+completed the original due gate and drew interval 3, making checkpoint 10
+the next due gate. That schedule was inherited for this correction.
+
+Checkpoint 8 established the absent-capability RED on unchanged production
+source, then implemented typed schema projection and guarded path recovery.
+Checkpoint 9 integrated the corrected four-route theory, provenance,
+descriptor, retained escape example and CLI. The unchanged 54 earlier tests
+retain their semantics; 25 new tests cover path/policy absence, exact paired
+constraints, renaming, policy-specific stationary compression, 127 binary
+route words against an independent run-length oracle, forged bindings and
+CLI outcomes. The stale wheel was refused before rebuilding version 0.3.0.
+
+Checkpoint 10 completed the full 79-test suite, exact three-module wheel
+binding, isolated wheel execution and the actual installed console entry.
+It also performed the inherited due audit: original-path/projection/source
+binding hotspot plus the prior ordinal and unresolved-sense surface. All
+3,072 independently enumerated ordinal comparisons passed; realignment
+remains OPEN and `order` still cannot alias `hyperorder`.
+
+After that audit, an actual pseudorandom draw used seed
+`11500066944957693065` and selected interval **6**. The next due audit is
+checkpoint **16**. Preserve that draw rather than redrawing to defer it.
+Current native adequacy remains OPEN regardless of host test counts.

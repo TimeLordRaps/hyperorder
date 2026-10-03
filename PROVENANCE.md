@@ -109,6 +109,9 @@ on 2026-10-03:
 |---|---|---|
 | [L0_ground.hm](https://github.com/TimeLordRaps/hypermath/blob/dc89cbb4f154844ca4909d7c1c359ee3882323e2/L0_ground.hm) | Ground/application and structural-before-relational stratification | No foundations edited or exported wholesale |
 | [L1_relations.hm](https://github.com/TimeLordRaps/hypermath/blob/dc89cbb4f154844ca4909d7c1c359ee3882323e2/L1_relations.hm) | `== → =~ → ~~` filtration | No claim that Python diagnostics are native relations |
+| [QUADRILATERAL_FILTRATION.md](https://github.com/TimeLordRaps/hypermath/blob/dc89cbb4f154844ca4909d7c1c359ee3882323e2/docs/research/QUADRILATERAL_FILTRATION.md) | Published four-surface architecture: off-branch `~=` schema abstraction and conditional retrace | Architecture is DOCUMENTED; the finite paired projection is a new [FRAME] proposal |
+| [QuadrilateralFiltration.lean](https://github.com/TimeLordRaps/hypermath/blob/dc89cbb4f154844ca4909d7c1c359ee3882323e2/lean4/Hypermath/QuadrilateralFiltration.lean) | Published prototype; `Abstraction` generated from similarity, `SubstanceWitness` defined as mutual simulation | Its retrace theorem returns an assumed semantic premise; it is not an independent promotion mechanism used here |
+| [abstraction.py](https://github.com/TimeLordRaps/hypermath/blob/dc89cbb4f154844ca4909d7c1c359ee3882323e2/src/hypermath_foundations/abstraction.py) | Published schema/projection prototype and witness-bearing conditional retrace | Declared validity flags are not replay evidence; this field checks exact paired rules and bindings |
 | [L2_operations.hm](https://github.com/TimeLordRaps/hypermath/blob/dc89cbb4f154844ca4909d7c1c359ee3882323e2/L2_operations.hm) | Ordered finite path composition; no commutativity cast | Host tuples are an explicit finite translation |
 | [L3_ordinatics.hm](https://github.com/TimeLordRaps/hypermath/blob/dc89cbb4f154844ca4909d7c1c359ee3882323e2/L3_ordinatics.hm) | Ordinal successors and limits belong to the native layer | Finite admission stages do not cover limits |
 | [simulation.md](https://github.com/TimeLordRaps/hypermath/blob/dc89cbb4f154844ca4909d7c1c359ee3882323e2/docs/terms/simulation.md) | Mutual path reproduction and the OPEN bisimulation bridge | Native adequacy is retained as OPEN |
@@ -117,3 +120,31 @@ on 2026-10-03:
 
 The pinned Hypergrammar source above remains the governing native-sense
 citation. No unpublished foundation draft is imported into this field.
+
+## 2026-10-03: quadrilateral correction
+
+USER-STATED: Tyler corrected the three-operator reference to the evolved
+quadrilateral filtration. The published architectural note was introduced
+on 2026-09-17 in
+[`6c9a381e3414de42634d534bf3159ff244cbe94a`](https://github.com/TimeLordRaps/hypermath/commit/6c9a381e3414de42634d534bf3159ff244cbe94a).
+The earlier development had implemented only the concrete branch; that
+omission is corrected by adding a separately inspectable abstraction route.
+
+ASSISTANT-PROPOSED [FRAME]: typed selected paired-path projection,
+explicit retained/forgotten constraints, optional stationary-run
+compression, and independent original-path retrace. These mechanisms do
+not copy the published prototype's universal lifting or circular witness
+premise. The source pin's L2 operations file has no abstraction clause;
+native path-domain adequacy and any later refinement remain OPEN pending
+separately published source and proof evidence. No unpublished refinement
+is quoted or exported.
+
+SHA-256 (Secure Hash Algorithm 256-bit) digests of the authenticated public
+source files inspected at that pin:
+
+| Public source | SHA-256 |
+|---|---|
+| `docs/research/QUADRILATERAL_FILTRATION.md` | `a3154346296d4629d503b1eda26c88014e492a90d2a337916f9a85ccf260c39f` |
+| `lean4/Hypermath/QuadrilateralFiltration.lean` | `9bae1e64cdf7dc1f3759db0d6ffe72707647e7b8f252a51e0d7692224af994d2` |
+| `src/hypermath_foundations/abstraction.py` | `27e1fd823f6e724d7d685f0fb10221eff80cc06e1d9dfb99f70e548825341d5d` |
+| `L2_operations.hm` | `6bb3c27105d75df17f2cca33b86b4e453ee339c44acc3509a40d7639187d1a6a` |

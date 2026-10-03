@@ -83,13 +83,23 @@ the geometry unchanged while replacing an interpretation without declaring
 the replacement. It fails `MEANING_TRANSPORT`. Coloring a bare graph with
 two labels cannot pass these obligations by itself.
 
-## Continuation filtration
+## Quadrilateral filtration and its concrete branch
 
 [HYPER] Native notation is preserved: `□` is ground/application/closure;
 `~~` is continuation overlap; `=~` is same substance landing with paths
 discarded; `==` is mutual path reproduction. The public
 [L1 filtration](https://github.com/TimeLordRaps/hypermath/blob/dc89cbb4f154844ca4909d7c1c359ee3882323e2/L1_relations.hm)
 states `== → =~ → ~~`. The converse implications are not supplied.
+
+[HYPER, DOCUMENTED architecture] The published
+[quadrilateral filtration](https://github.com/TimeLordRaps/hypermath/blob/dc89cbb4f154844ca4909d7c1c359ee3882323e2/docs/research/QUADRILATERAL_FILTRATION.md)
+adds `~=` as an **off-branch abstraction surface**, distinct from `=~`.
+The concrete syntax/substance/semantics route remains; a schema route
+forgets declared operational details and needs a conditional retrace.
+The four surfaces form a diagram with two routes. They do not insert `~=`
+as a fourth rung in the L1 implication chain. The next section develops a
+finite selected-path implementation with explicit projection and recovery
+obligations.
 
 [FRAME] For a position `x`, let `C(x)` be the finite set of reachable
 declared landings. A landing retains the entire pair `(G,P)` and its
@@ -104,7 +114,7 @@ The executable diagnostics are:
 | `congruent` | Both capacities are non-empty and `C(x) = C(y)` | All declared substance landings |
 | `simulation` | Congruence and membership in the greatest paired strong bisimulation | Both observations and every branching continuation |
 
-The word *diagnostic* matters. These checks translate selected content of
+The word *diagnostic* matters. These concrete-branch checks translate selected content of
 the native relation definitions; they do not assign a native `~~`, `=~`, or
 `==` proof to a Python object.
 
@@ -155,6 +165,103 @@ If declarations are incomplete, a witnessed common landing can still pass
 the overlap diagnostic. Complete capacity coincidence, complete path
 reproduction and universal convergence stay UNKNOWN. Neither missing
 declarations nor an empty capacity is silently read as equality.
+
+## Off-branch paired path abstraction and conditional retrace
+
+[FRAME] `quadrilateral.py` supplies an explicit path-domain projection.
+Let `p` be a connected `PathWitness` replayed in accepted frame `F`, and
+let `k` be a typed `ProjectionPolicy`. The projection `A_k(F,p)` retains:
+
+- The start and end observations `(G,P,o)` and both invariant sets.
+- Every ordered rule's operation, rationale, exact additions/removals in
+  both colorings, and its before/after observations.
+- The explicit policy. Neither coloring is inferred from the other.
+
+It forgets position and continuation identifiers and unselected branches
+**in the compared schema**. An optional policy additionally compresses a
+consecutive run of identical stationary paired rules to one schema step.
+Stationary means identical before/after observations, including outcome,
+and empty changes in both colorings. This forgets multiplicity only within
+such a run. It retains an empty path as empty and a nonempty run as nonempty.
+Alternating operations, changed rationales, nonstationary changes and
+the order of differing rules remain distinct. Stationary repetition is a
+declared finite schema choice; it is not native quantification or a measure
+of substance.
+
+[FRAME] The abstraction diagnostic compares `A_k(F,p) = A_k(H,q)` for two
+**explicit replayed paths** under one policy. Missing either path or policy
+returns UNKNOWN. It does not lift arbitrary continuation overlap, complete
+`~~` transitively, or assign `~=` to a native Form. Changing the policy
+changes the relation's domain. Source and original-path digests remain in
+each `PathProjection` but are excluded from schema equality, so renaming
+incidental identifiers can preserve abstraction without preserving a
+retrace witness.
+
+[FORM within this FRAME] **Schema equality is an equivalence relation on
+accepted selected paths under a fixed policy.** Reflexivity, symmetry and
+transitivity follow from equality of the retained `PathSchema`. This
+proposition concerns this finite schema domain only. It proves neither
+native `~=` transitivity nor an implication between global concrete
+diagnostics and selected-path abstraction. The projection's optional
+stationary run compression is idempotent: applying it to a normalized run
+cannot remove another differing or nonstationary step.
+
+[FORM within this FRAME] **Projection preserves ordered paired transport.**
+Each retained step has its original paired premises and exact target
+transforms. Forgetting names changes no observation or delta. Compressing
+an identical stationary run leaves the same observation on both sides,
+so it joins its neighbors without severing incidence. Thus every retained
+step still meets both transport obligations and all retained invariants.
+The proposition does not preserve the forgotten multiplicity.
+
+[FRAME] Conditional retrace requires the original frame, a `PathProjection`
+and a `RetraceWitness` naming the original route. It recomputes the whole
+frame digest, checks the witness's full projection digest, replays paired
+transport, checks the original path digest, and recomputes the projection.
+PASS means **the original selected finite paired path was recovered**.
+Hash agreement alone cannot establish it: an internally consistent forged
+schema with a recomputed digest still fails reconstruction from the rules.
+Missing evidence is UNKNOWN; a conflicting binding or reconstruction is
+FAIL. A full frame-record binding includes even unselected branches.
+
+`QuadrilateralReport` exposes `similar`, `congruent`, `simulation` and
+`abstracted` separately, along with both retrace reports. Global concrete
+reproduction is evaluated over the declared frame independently of the
+selected schema. `native_semantic_promotion` is UNKNOWN even after a retrace
+PASS, and `native_adequacy` remains OPEN.
+
+Counterexamples and worked instances:
+
+1. Two paired routes have the same ordered reconciliation rule and target.
+   One origin also has an escape to another landing. Selected abstraction
+   passes; global congruence and simulation fail. Selected path recovery
+   does not erase that alternative.
+2. One self-read and three identical stationary self-reads compare equal
+   only under the repetition policy. Recovering the three-step original
+   from a one-step projection fails its original-path binding. The exact
+   policy retains the difference.
+3. Replacing a retained rationale or a paired delta with an internally
+   consistent fake and recomputing its digest still fails rule replay's
+   schema reconstruction. Hashing a claim does not prove its meaning.
+4. Adding an unused branch leaves the selected schema unchanged but
+   invalidates a witness bound to the previous complete frame. Renaming
+   incidental names similarly preserves schema equality while requiring a
+   new exact route witness.
+
+[OPEN] The public 2026-09-17 architectural note supplies the four-route
+design, not a native adequacy proof for this projection. At the same public
+pin, the
+[Lean sketch](https://github.com/TimeLordRaps/hypermath/blob/dc89cbb4f154844ca4909d7c1c359ee3882323e2/lean4/Hypermath/QuadrilateralFiltration.lean)
+generates `Abstraction` on Forms using `Similar` and equivalence closure;
+its `SubstanceWitness` already assumes mutual simulation, so its
+`conditionalRetrace` returns that premise. This does not independently
+establish semantic promotion. The
+[Python abstraction prototype](https://github.com/TimeLordRaps/hypermath/blob/dc89cbb4f154844ca4909d7c1c359ee3882323e2/src/hypermath_foundations/abstraction.py)
+also carries permissive declared witness fields. This field adopts neither
+as a native checker or substitutes a validity flag for replay. The pinned
+public L2 file has no abstraction clause. Native path-domain adequacy and
+any later refinement therefore require their own published coordinate and
+proof obligations; no unpublished foundation text is imported here.
 
 ## Path preservation and paired return
 
@@ -274,6 +381,7 @@ inference tree.
 | L0_ground: □ and unary application | Retained named positions and paired changes | Derive representation and application from the native ground; no Python set is claimed to be a native Form |
 | L1_relations: `~~`, `=~`, `==` filtration | Productive capacity/reproduction diagnostics | Adequacy for each native relation; computational bisimulation alone does not settle it |
 | L2_operations: ordered composition | `follow_path`, `compose_paths` | Native composition and trace-stratum transport; no commutativity cast |
+| Published quadrilateral architecture: off-branch `~=` and conditional retrace | Explicit selected paired-path schemas, optional stationary compression, exact original-path recovery | Native path-domain adequacy and promotion remain OPEN; no four-rung L1 chain or Form-equivalence claim |
 | L3_ordinatics: successors and limits | Finite inevitability stages | Transfinite continuation and limit coverage are unimplemented |
 | Hypergrammar dichrome | Exact coupled geometric/meaning transport | Native inseparability and hypertopology generation rather than imposed color sets |
 | Hyperchaos divergence of divergences | Distinct family profiles as a declared input | Source-grounded extraction of profiles from the sibling field; no adapter is claimed implemented |

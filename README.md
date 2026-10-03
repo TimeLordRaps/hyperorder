@@ -26,6 +26,13 @@ structure and interpretive commitments. Each continuation must reproduce
 both colorings exactly. An undeclared structural change, a missing meaning
 premise or a lost invariant is an explicit obstruction.
 
+The field follows the published
+[quadrilateral filtration architecture](https://github.com/TimeLordRaps/hypermath/blob/dc89cbb4f154844ca4909d7c1c359ee3882323e2/docs/research/QUADRILATERAL_FILTRATION.md):
+`~~`, `=~`, `==` remain the concrete branch, while **`~=` is a separate
+path-schema abstraction surface**. The executable version is an explicit
+[FRAME] proposal with selected-path evidence and guarded retrace. It does
+not insert `~=` as a linear L1 midpoint or claim a native relation proof.
+
 The mechanisms support:
 
 - Continuation capacity overlap, full substance-landings coincidence and
@@ -34,6 +41,13 @@ The mechanisms support:
   calculation. A shared landing cannot hide a different path.
 - Retained path traversal and associative composition. A non-empty paired
   return has its own bounded closure diagnostic.
+- Typed paired path projection: retain ordered structure, interpretations,
+  both color transforms and invariants, while forgetting incidental names
+  and unselected branches in the schema. An explicit optional policy can
+  forget only multiplicity of identical stationary paired rules.
+- Conditional retrace bound to the complete frame, retained projection and
+  original route. Forged or transplanted evidence fails. PASS reports
+  selected path recovery; global path reproduction is reported separately.
 - Convergence of **distinct divergence families** to a productive stable
   continuation class. Every declared alternative must enter the basin;
   one favorable path cannot hide an escape or an outside cycle.
@@ -53,6 +67,8 @@ python -B -u hyperorder.py demo --incomplete
 python -B -u hyperorder.py converge examples/paired-frame.json examples/divergence-families.json paired-form
 python -B -u hyperorder.py compare examples/paired-frame.json geometry-route meaning-route
 python -B -u hyperorder.py trace examples/paired-frame.json paired-form self-read self-return
+python -B -u hyperorder.py quad examples/paired-frame.json paired-form paired-form --left-route self-read --right-route self-read self-return self-read --projection stationary --retrace
+python -B -u hyperorder.py quad examples/abstraction-escape-frame.json left-start right-start --left-route left-step --right-route right-step --projection exact --retrace
 python -B -u hyperorder.py describe examples/paired-frame.json
 ```
 
@@ -62,6 +78,18 @@ incomplete variant reports UNKNOWN. Geometry-first and meaning-first
 routes share substance landings but fail mutual path reproduction.
 `compare` exits 1 for that supported obstruction, rather than reporting
 a successful simulation.
+
+The `quad` command compares one self-read with a three-step stationary run.
+Its optional policy produces matching schemas, while the retrace reports
+recover the original one-step and three-step paths separately. Use
+`--projection exact` to retain their multiplicity and observe abstraction
+FAIL. Without explicit paths and policy, abstraction stays UNKNOWN. The
+demo includes all four statuses, exact witness bindings and a separate
+native-promotion UNKNOWN. The `abstraction-escape-frame` example reports
+selected abstraction and both original path recoveries PASS while global
+congruence/simulation FAIL. Its exit 0 supports the requested selected
+schema/recovery proposition; the separately reported escape remains an
+obstruction. [The theory](THEORY.md) explains the distinction.
 
 Install with `python -m pip install .` to use the `hyperorder` command.
 Python 3.12 or later is required. Input records are retained as ordinary

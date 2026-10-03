@@ -14,6 +14,10 @@ from dichrome import (ClosureReport, Continuation, DichromeFrame, DivergenceFami
                       Obstruction, PathWitness, Position, ReproductionObstruction, closure,
                       compose_paths, converge_families, describe, example_frame, filtration,
                       follow_path, inspect_frame, read_description, to_json, verify_description)
+from quadrilateral import (AbstractionReport, PairedObservation, PathProjection, PathSchema,
+                           ProjectionPolicy, QuadrilateralReport, RetraceReport, RetraceWitness,
+                           SchemaStep, conditional_retrace, make_retrace_witness,
+                           path_abstraction, project_path, quadrilateral)
 
 HYPERGRAMMAR = "hypergrammar d4df988be65636bf66d6d3f8ef5a85edf524d8dc"
 MAX_ELEMENTS = 64
@@ -177,12 +181,17 @@ def main(argv: list[str] | None = None) -> int:
     demo = commands.add_parser("demo", help="run distinct divergence families and an obstruction")
     demo.add_argument("--escape", action="store_true", help="add a non-converging declared branch")
     demo.add_argument("--incomplete", action="store_true", help="retain UNKNOWN for undeclared continuations")
-    for name in ("inspect", "describe", "compare", "trace", "converge", "verify-description"):
+    for name in ("inspect", "describe", "compare", "quad", "trace", "converge", "verify-description"):
         command = commands.add_parser(name)
         command.add_argument("frame", type=Path)
-        if name == "compare":
+        if name in ("compare", "quad"):
             command.add_argument("left")
             command.add_argument("right")
+            if name == "quad":
+                command.add_argument("--left-route", nargs="*")
+                command.add_argument("--right-route", nargs="*")
+                command.add_argument("--projection", choices=("exact", "stationary"))
+                command.add_argument("--retrace", action="store_true")
         elif name == "trace":
             command.add_argument("origin")
             command.add_argument("route", nargs="*")
@@ -196,11 +205,19 @@ def main(argv: list[str] | None = None) -> int:
         if args.command == "demo":
             frame, families = example_frame(escape=args.escape, incomplete=args.incomplete)
             report = converge_families(frame, families, "paired-form")
+            short = follow_path(frame, "paired-form", ("self-read",))
+            long = follow_path(frame, "paired-form", ("self-read", "self-return", "self-read"))
+            policy = ProjectionPolicy(collapse_stationary_repetition=True)
+            left_projection, right_projection = project_path(frame, short, policy), project_path(frame, long, policy)
+            quad = quadrilateral(frame, "paired-form", "paired-form", short, long, policy,
+                                 left_witness=make_retrace_witness(frame, left_projection, short),
+                                 right_witness=make_retrace_witness(frame, right_projection, long))
             output = {"classification": "FRAME", "inspection": inspect_frame(frame),
                       "family_convergence": report,
                       "path_sensitive_comparison": filtration(frame, "geometry-route", "meaning-route"),
                       "self_read_return": closure(frame, "paired-form", ("self-read", "self-return")),
                       "description_recovery": verify_description(frame, describe(frame)),
+                      "quadrilateral": quad,
                       "native_adequacy": "OPEN"}
             print(to_json(output), end="")
             return 0 if report.status is Evidence.PASS else 1
@@ -225,6 +242,19 @@ def main(argv: list[str] | None = None) -> int:
         elif args.command == "compare":
             result = filtration(frame, args.left, args.right)
             succeeded = result.simulation is Evidence.PASS
+        elif args.command == "quad":
+            left = None if args.left_route is None else follow_path(frame, args.left, tuple(args.left_route))
+            right = None if args.right_route is None else follow_path(frame, args.right, tuple(args.right_route))
+            policy = None if args.projection is None else ProjectionPolicy(args.projection == "stationary")
+            abstract = path_abstraction(frame, left, frame, right, policy)
+            left_witness = (make_retrace_witness(frame, abstract.left, left)
+                            if args.retrace and abstract.left is not None else None)
+            right_witness = (make_retrace_witness(frame, abstract.right, right)
+                             if args.retrace and abstract.right is not None else None)
+            result = quadrilateral(frame, args.left, args.right, left, right, policy,
+                                   left_witness=left_witness, right_witness=right_witness)
+            succeeded = result.abstracted is Evidence.PASS and (not args.retrace or
+                         result.left_retrace.status is Evidence.PASS and result.right_retrace.status is Evidence.PASS)
         elif args.command == "trace":
             result, succeeded = follow_path(frame, args.origin, tuple(args.route)), True
         elif args.command == "converge":

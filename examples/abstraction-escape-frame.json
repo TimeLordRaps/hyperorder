@@ -1,0 +1,116 @@
+{
+  "classification": "FRAME",
+  "continuations": [
+    {
+      "add_commitments": [
+        "joint-meaning"
+      ],
+      "add_geometry": [
+        "self-description"
+      ],
+      "name": "left-step",
+      "operation": "reconcile",
+      "rationale": "retain both",
+      "remove_commitments": [],
+      "remove_geometry": [],
+      "source": "left-start",
+      "target": "left-end"
+    },
+    {
+      "add_commitments": [
+        "joint-meaning"
+      ],
+      "add_geometry": [
+        "self-description"
+      ],
+      "name": "right-step",
+      "operation": "reconcile",
+      "rationale": "retain both",
+      "remove_commitments": [],
+      "remove_geometry": [],
+      "source": "right-start",
+      "target": "right-end"
+    },
+    {
+      "add_commitments": [
+        "unresolved-meaning"
+      ],
+      "add_geometry": [
+        "unresolved"
+      ],
+      "name": "right-alternate",
+      "operation": "escape",
+      "rationale": "remain unresolved",
+      "remove_commitments": [],
+      "remove_geometry": [],
+      "source": "right-start",
+      "target": "right-escape"
+    }
+  ],
+  "exhaustive": true,
+  "geometry_invariants": [
+    "incidence"
+  ],
+  "meaning_invariants": [
+    "interpretation"
+  ],
+  "positions": [
+    {
+      "commitments": [
+        "interpretation"
+      ],
+      "geometry": [
+        "incidence"
+      ],
+      "name": "left-start",
+      "outcome": null
+    },
+    {
+      "commitments": [
+        "interpretation",
+        "joint-meaning"
+      ],
+      "geometry": [
+        "incidence",
+        "self-description"
+      ],
+      "name": "left-end",
+      "outcome": "paired-landing"
+    },
+    {
+      "commitments": [
+        "interpretation"
+      ],
+      "geometry": [
+        "incidence"
+      ],
+      "name": "right-start",
+      "outcome": null
+    },
+    {
+      "commitments": [
+        "interpretation",
+        "joint-meaning"
+      ],
+      "geometry": [
+        "incidence",
+        "self-description"
+      ],
+      "name": "right-end",
+      "outcome": "paired-landing"
+    },
+    {
+      "commitments": [
+        "interpretation",
+        "unresolved-meaning"
+      ],
+      "geometry": [
+        "incidence",
+        "unresolved"
+      ],
+      "name": "right-escape",
+      "outcome": "other-landing"
+    }
+  ],
+  "schema": "hyperorder.paired-continuation/1"
+}

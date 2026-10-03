@@ -1,4 +1,4 @@
-# Hyperorder field contract: paired continuation, family convergence and ordinality
+# Hyperorder field contract: paired quadrilateral paths, family convergence and ordinality
 
 **Status, 2026-10-03.** [HYPER] Hyperorder is, in Hypergrammar's chapter on
 hypertopologies, the form in which the dichrome closes geometry and
@@ -15,8 +15,11 @@ an established structural proposition within its named finite frame.
 
 ## Executable paired field contract
 
-The theory and derivations are in [THEORY.md](THEORY.md). `dichrome.py`
-implements these immutable finite objects and operations:
+The theory and derivations are in [THEORY.md](THEORY.md). `dichrome.py` and
+`quadrilateral.py` implement these immutable finite objects and operations.
+The published quadrilateral architecture has an off-branch `~=` distinct
+from the `~~`, `=~`, `==` concrete branch. Its finite selected-path schema
+implementation here is [FRAME]; native adequacy and promotion remain OPEN.
 
 | Object or operation | Acceptance condition |
 |---|---|
@@ -24,7 +27,11 @@ implements these immutable finite objects and operations:
 | `Continuation` | Named ends, an operation/rationale pair, four explicit addition/removal sets; contradictory changes refused |
 | `DichromeFrame` | At most 64 positions, 256 continuations and 64 atoms per coloring; distinct identities, declared incidence, immutable inputs |
 | `inspect_frame` | Exact reproduction of both target colorings, valid source premises, fresh additions and both invariant sets |
-| `filtration` | Nonempty capacity overlap; complete productive landing coincidence; greatest paired mutual path reproduction; exact obstructions |
+| `filtration` | Compatible concrete-branch diagnostics: nonempty capacity overlap; complete productive landing coincidence; greatest paired mutual path reproduction; exact obstructions |
+| `ProjectionPolicy`, `PathSchema`, `PathProjection`, `project_path` | Exact replay before projection; paired endpoints, ordered rule labels/deltas/observations and invariants retained; names and unselected branches omitted from schema; optional identical stationary-run multiplicity omission only; raw route and whole frame bound separately |
+| `path_abstraction` | Schema equality for two explicit selected paths under one typed policy; absent path/policy evidence UNKNOWN; no linear L1 rank or native Form equivalence |
+| `RetraceWitness`, `make_retrace_witness`, `conditional_retrace` | Whole frame, full projection and original-route binding; exact paired replay and schema reconstruction; forged/transplanted witness FAIL; missing evidence UNKNOWN; PASS means original selected path recovery only |
+| `quadrilateral`, `QuadrilateralReport` | Concrete similar/congruent/simulation diagnostics plus separate abstraction status and both retrace results; global reproduction stays distinct from selected recovery; native semantic promotion UNKNOWN |
 | `follow_path`, `compose_paths` | Every intermediate incidence and operation/rationale retained; severed composition refused; at most 256 continuations per route |
 | `closure` | Non-empty accepted route returning to a productive mutually reproducing position; no all-branches or native-formation implication |
 | `DivergenceFamily`, `converge_families` | Each family contains path-distinct members; two family profiles differ; all alternatives inevitably reach a productive stable reproduction class |
@@ -39,9 +46,16 @@ external truth or substitutes for a native relation proof.
 The command-line interface accepts retained JSON records up to 2,000,000
 bytes, rejects duplicate object fields and returns exit 0 for a supported
 requested proposition, exit 1 for its obstruction or UNKNOWN, and exit 2
-for malformed input. `demo`, `inspect`, `compare`, `trace`, `converge`,
+for malformed input. `demo`, `inspect`, `compare`, `quad`, `trace`, `converge`,
 `describe` and `verify-description` expose the operations. The program never
 executes code from a record.
+
+`quad` requires explicit `--left-route`, `--right-route` and `--projection
+exact|stationary` for a supported abstraction claim. `--retrace` prepares
+the original exact route witnesses and reports recovery separately. Exit 0
+binds to the selected abstraction/recovery request, even if a separately
+reported global simulation fails. Routes and compressed schemas remain
+bounded to 256 steps; no path-length quantity is called native substance.
 
 ## What this field owns, and what it cites
 
