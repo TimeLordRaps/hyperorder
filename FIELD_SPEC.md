@@ -1,20 +1,55 @@
-# Hyperorder: the dichrome closed, and order kept ordinal
+# Hyperorder field contract: paired continuation, family convergence and ordinality
 
-**Status, 2026-09-30.** [FRAME] Hyperorder is, in Hypergrammar's chapter on
+**Status, 2026-10-03.** [HYPER] Hyperorder is, in Hypergrammar's chapter on
 hypertopologies, the form in which the dichrome closes geometry and
 philosophy: "the geometric philosophy and philosophical geometry of itself".
 Tyler Roost's 2026-09-30 statement relates chaos, order, atemporality,
 hyperorder, hyperchaos and hyperethics, and is not settled. This repository
-is proposed as the family's home for hyperorder. It does not settle the
-questions below. Tags: [HYPER] a proposal or declaration, [FRAME] the finite
-executable reading, [OPEN] unresolved, [FORM] a structural fact the tests
-check.
+is the family's developing home for hyperorder. Tyler's 2026-10-03
+clarification additionally associates divergent structures entering
+convergent states with hyperorder. This operational direction is implemented
+as a proposed paired continuation mechanism, distinct from a claim to
+native dichrome formation. Tags: [HYPER] sourced native declaration,
+[FRAME] proposed finite translation, [OPEN] unresolved adequacy, [FORM]
+an established structural proposition within its named finite frame.
+
+## Executable paired field contract
+
+The theory and derivations are in [THEORY.md](THEORY.md). `dichrome.py`
+implements these immutable finite objects and operations:
+
+| Object or operation | Acceptance condition |
+|---|---|
+| `Position` | A named position with non-empty finite geometric and meaning colorings and an optional substance landing |
+| `Continuation` | Named ends, an operation/rationale pair, four explicit addition/removal sets; contradictory changes refused |
+| `DichromeFrame` | At most 64 positions, 256 continuations and 64 atoms per coloring; distinct identities, declared incidence, immutable inputs |
+| `inspect_frame` | Exact reproduction of both target colorings, valid source premises, fresh additions and both invariant sets |
+| `filtration` | Nonempty capacity overlap; complete productive landing coincidence; greatest paired mutual path reproduction; exact obstructions |
+| `follow_path`, `compose_paths` | Every intermediate incidence and operation/rationale retained; severed composition refused; at most 256 continuations per route |
+| `closure` | Non-empty accepted route returning to a productive mutually reproducing position; no all-branches or native-formation implication |
+| `DivergenceFamily`, `converge_families` | Each family contains path-distinct members; two family profiles differ; all alternatives inevitably reach a productive stable reproduction class |
+| `describe`, `read_description`, `verify_description` | Exact retained schema, rule/atom/incidence recovery, transport rechecking and whole-record binding |
+
+The diagnostic evidence states are PASS, FAIL, UNKNOWN and CONFLICTED.
+Unreproduced paired transport is CONFLICTED for filtration. Missing
+continuation coverage makes strong completeness/convergence claims UNKNOWN.
+Input malformation is refused. None of these states authenticates an atom's
+external truth or substitutes for a native relation proof.
+
+The command-line interface accepts retained JSON records up to 2,000,000
+bytes, rejects duplicate object fields and returns exit 0 for a supported
+requested proposition, exit 1 for its obstruction or UNKNOWN, and exit 2
+for malformed input. `demo`, `inspect`, `compare`, `trace`, `converge`,
+`describe` and `verify-description` expose the operations. The program never
+executes code from a record.
 
 ## What this field owns, and what it cites
 
-Hyperorder owns the **sense discipline** for the term `hyperorder` and the
-**ordinal bookkeeping** used when a finite claim about order is tested.
-Whether it also owns the dichrome-closure text is Q3.
+Hyperorder develops the **sense discipline**, **paired structural/meaning
+continuation theory**, **convergence of distinct divergence-family
+profiles**, **path-sensitive return and self-description**, and the
+retained **ordinal bookkeeping**. Hypergrammar remains the cited owner of
+the native dichrome text; this development does not move or rewrite it.
 
 It cites and does not restate:
 
@@ -44,8 +79,9 @@ are no longer separable." Line 179: "the dichrome *is* hyperorder".
   alias table.
 - The 2026-09-30 statement is recorded with status OPEN. It relates `order`,
   not the sense, so recording it identifies nothing.
-- The module exports no grounding relation, rank, degree, clock, index,
-  duration or step.
+- The module exports no grounding relation, rank, degree, clock, physical
+  time index or duration. Finite algorithm rounds are evidence coordinates,
+  not numerical hyperorder.
 
 ## The ordinal bookkeeping
 
@@ -67,16 +103,18 @@ a finite claim about order:
   declared total, and `total=True` is checked: every pair of distinct
   positions must be connected, and no pair may be declared incomparable.
 
-The five verdicts and "a missing relation is UNKNOWN" come from a 2026-09-30
+The five ordinal verdicts and "a missing relation is UNKNOWN" come from a 2026-09-30
 research exchange on chaos and order; see [PROVENANCE.md](PROVENANCE.md).
 They are bookkeeping that any claim about hyperorder would have to pass.
 They are not hyperorder.
 
 ## Questions for Tyler
 
-- **Q1.** Is the order that chaos realigns into (2026-09-30) hyperorder in
-  Hypergrammar's dichrome sense, or a different subject? The frame keeps
-  them apart until you rule. If they are the same, the identification
+- **Q1, narrowed by 2026-10-03.** Is the order that chaos realigns into (2026-09-30) hyperorder in
+  Hypergrammar's dichrome sense, or a different subject? The new live
+  statement establishes the operational
+  convergence direction; identity with the native dichrome is still open.
+  The frame keeps that gap explicit. If they are the same, the identification
   becomes a declared, sourced entry with its own test, never an alias.
 - **Q2.** Does Hyperethics ground hyperorder? You said "Im not sure".
   Hypergrammar says hyperorder's hypertopology is generated by hyperorder

@@ -2,6 +2,7 @@
 
 import importlib
 import json
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -13,8 +14,10 @@ def main() -> int:
         raise SystemExit("Python 3.12 or later is required for this local runner")
     descriptor = json.loads((root / "FIELD.json").read_text(encoding="utf-8"))
     module = importlib.import_module(descriptor["module"])
-    if Path(module.__file__).resolve() != root / (descriptor["module"] + ".py"):
-        raise SystemExit("field module resolves outside this repository")
+    for name in descriptor["implementation_modules"]:
+        implementation = importlib.import_module(name)
+        if Path(implementation.__file__).resolve() != root / (name + ".py"):
+            raise SystemExit("field implementation resolves outside this repository: " + name)
     missing = [name for name in descriptor["exports"] if not hasattr(module, name)]
     if missing:
         raise SystemExit(f"descriptor exports are unbound: {missing}")
@@ -23,7 +26,8 @@ def main() -> int:
     command = [sys.executable, "-u", "-m", "unittest", "discover", "-s", "tests",
                "-v", "--durations", "10"]
     try:
-        return subprocess.run(command, cwd=root, timeout=20, check=False).returncode
+        environment = dict(os.environ, PYTHONDONTWRITEBYTECODE="1")
+        return subprocess.run(command, cwd=root, timeout=20, check=False, env=environment).returncode
     except subprocess.TimeoutExpired:
         print("DEADLINE: owned test process terminated; outcome UNKNOWN", flush=True)
         return 1

@@ -1,0 +1,18 @@
+{
+  "families": [
+    {
+      "members": [
+        "geometry-route",
+        "meaning-route"
+      ],
+      "name": "base-divergence"
+    },
+    {
+      "members": [
+        "meta-geometry-route",
+        "meta-meaning-route"
+      ],
+      "name": "meta-divergence"
+    }
+  ]
+}

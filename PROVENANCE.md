@@ -78,3 +78,42 @@ The dichrome and the build chain are Hypergrammar's. Order among reality
 presentations is [Hypertime](https://github.com/TimeLordRaps/hypertime)'s.
 The project makes no private-source claim and asserts no Verifier Standard
 certification.
+
+## 2026-10-03: a convergence direction, and substantive field development
+
+USER-STATED, live clarification: hyperchaos concerns chaos of chaotic
+divergences, specifically divergence of divergences. Divergences entering
+convergent states are associated with hyperorder. A butterfly effect
+breaking one orderly trajectory toward another optimum is ordinary chaos,
+not sufficient to establish hyperchaos.
+
+This clarification establishes an operational association and supersedes
+the earlier absence of a declared direction. It does not assert that a
+finite basin or a path merge is the native dichrome. That exact identity
+remains OPEN in [THEORY.md](THEORY.md).
+
+ASSISTANT-PROPOSED [FRAME], developed in response to the request for real
+fields: paired geometry/meaning change rules, invariant transport,
+productive landing capacities, a greatest finite strong-bisimulation
+diagnostic, retained path composition and paired return, universal
+stabilization of distinct divergence-family profiles, and exact operational
+description recovery. The examples and finite propositions are authored
+research contributions. They are not represented as Tyler's prior words,
+as an existing native derivation or as a physical result.
+
+Public Hypermath sources were inspected at
+[`dc89cbb4f154844ca4909d7c1c359ee3882323e2`](https://github.com/TimeLordRaps/hypermath/tree/dc89cbb4f154844ca4909d7c1c359ee3882323e2)
+on 2026-10-03:
+
+| Source | Content used | Boundary |
+|---|---|---|
+| [L0_ground.hm](https://github.com/TimeLordRaps/hypermath/blob/dc89cbb4f154844ca4909d7c1c359ee3882323e2/L0_ground.hm) | Ground/application and structural-before-relational stratification | No foundations edited or exported wholesale |
+| [L1_relations.hm](https://github.com/TimeLordRaps/hypermath/blob/dc89cbb4f154844ca4909d7c1c359ee3882323e2/L1_relations.hm) | `== → =~ → ~~` filtration | No claim that Python diagnostics are native relations |
+| [L2_operations.hm](https://github.com/TimeLordRaps/hypermath/blob/dc89cbb4f154844ca4909d7c1c359ee3882323e2/L2_operations.hm) | Ordered finite path composition; no commutativity cast | Host tuples are an explicit finite translation |
+| [L3_ordinatics.hm](https://github.com/TimeLordRaps/hypermath/blob/dc89cbb4f154844ca4909d7c1c359ee3882323e2/L3_ordinatics.hm) | Ordinal successors and limits belong to the native layer | Finite admission stages do not cover limits |
+| [simulation.md](https://github.com/TimeLordRaps/hypermath/blob/dc89cbb4f154844ca4909d7c1c359ee3882323e2/docs/terms/simulation.md) | Mutual path reproduction and the OPEN bisimulation bridge | Native adequacy is retained as OPEN |
+| [congruent.md](https://github.com/TimeLordRaps/hypermath/blob/dc89cbb4f154844ca4909d7c1c359ee3882323e2/docs/terms/congruent.md) | Same substance landing; paths discarded | No substance/number equivalence |
+| [NATIVE_ACCEPTANCE.md](https://github.com/TimeLordRaps/hypermath/blob/dc89cbb4f154844ca4909d7c1c359ee3882323e2/docs/research/NATIVE_ACCEPTANCE.md) | Closure of a represented record does not authenticate its inference tree | Description recovery does not claim ranked native acceptance |
+
+The pinned Hypergrammar source above remains the governing native-sense
+citation. No unpublished foundation draft is imported into this field.

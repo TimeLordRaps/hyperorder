@@ -1,0 +1,216 @@
+{
+  "classification": "FRAME",
+  "continuations": [
+    {
+      "add_commitments": [
+        "joint-interpretation"
+      ],
+      "add_geometry": [
+        "self-description"
+      ],
+      "name": "close-geometry-route",
+      "operation": "join-geometry-route",
+      "rationale": "retain and reconcile both colorings",
+      "remove_commitments": [
+        "interpret-shape"
+      ],
+      "remove_geometry": [
+        "geometry-first"
+      ],
+      "source": "geometry-route",
+      "target": "paired-form"
+    },
+    {
+      "add_commitments": [
+        "joint-interpretation"
+      ],
+      "add_geometry": [
+        "self-description"
+      ],
+      "name": "close-meaning-route",
+      "operation": "join-meaning-route",
+      "rationale": "retain and reconcile both colorings",
+      "remove_commitments": [
+        "shape-interpretation"
+      ],
+      "remove_geometry": [
+        "meaning-first"
+      ],
+      "source": "meaning-route",
+      "target": "paired-form"
+    },
+    {
+      "add_commitments": [
+        "joint-interpretation"
+      ],
+      "add_geometry": [
+        "self-description"
+      ],
+      "name": "close-meta-geometry-route",
+      "operation": "join-meta-geometry-route",
+      "rationale": "retain and reconcile both colorings",
+      "remove_commitments": [
+        "interpret-rules"
+      ],
+      "remove_geometry": [
+        "meta-geometry-first"
+      ],
+      "source": "meta-geometry-route",
+      "target": "paired-form"
+    },
+    {
+      "add_commitments": [
+        "joint-interpretation"
+      ],
+      "add_geometry": [
+        "self-description"
+      ],
+      "name": "close-meta-meaning-route",
+      "operation": "join-meta-meaning-route",
+      "rationale": "retain and reconcile both colorings",
+      "remove_commitments": [
+        "rules-interpretation"
+      ],
+      "remove_geometry": [
+        "meta-meaning-first"
+      ],
+      "source": "meta-meaning-route",
+      "target": "paired-form"
+    },
+    {
+      "add_commitments": [],
+      "add_geometry": [],
+      "name": "self-read",
+      "operation": "self-read",
+      "rationale": "retain incidence and commitments",
+      "remove_commitments": [],
+      "remove_geometry": [],
+      "source": "paired-form",
+      "target": "paired-self-read"
+    },
+    {
+      "add_commitments": [],
+      "add_geometry": [],
+      "name": "self-return",
+      "operation": "self-read",
+      "rationale": "retain incidence and commitments",
+      "remove_commitments": [],
+      "remove_geometry": [],
+      "source": "paired-self-read",
+      "target": "paired-form"
+    },
+    {
+      "add_commitments": [
+        "not-reconciled"
+      ],
+      "add_geometry": [
+        "escape"
+      ],
+      "name": "escape",
+      "operation": "unreconciled-branch",
+      "rationale": "retain but fail to reconcile",
+      "remove_commitments": [
+        "interpret-shape"
+      ],
+      "remove_geometry": [
+        "geometry-first"
+      ],
+      "source": "geometry-route",
+      "target": "unresolved-escape"
+    }
+  ],
+  "exhaustive": true,
+  "geometry_invariants": [
+    "paired-incidence"
+  ],
+  "meaning_invariants": [
+    "retain-both-colors"
+  ],
+  "positions": [
+    {
+      "commitments": [
+        "interpret-shape",
+        "retain-both-colors"
+      ],
+      "geometry": [
+        "geometry-first",
+        "paired-incidence"
+      ],
+      "name": "geometry-route",
+      "outcome": null
+    },
+    {
+      "commitments": [
+        "retain-both-colors",
+        "shape-interpretation"
+      ],
+      "geometry": [
+        "meaning-first",
+        "paired-incidence"
+      ],
+      "name": "meaning-route",
+      "outcome": null
+    },
+    {
+      "commitments": [
+        "interpret-rules",
+        "retain-both-colors"
+      ],
+      "geometry": [
+        "meta-geometry-first",
+        "paired-incidence"
+      ],
+      "name": "meta-geometry-route",
+      "outcome": null
+    },
+    {
+      "commitments": [
+        "retain-both-colors",
+        "rules-interpretation"
+      ],
+      "geometry": [
+        "meta-meaning-first",
+        "paired-incidence"
+      ],
+      "name": "meta-meaning-route",
+      "outcome": null
+    },
+    {
+      "commitments": [
+        "joint-interpretation",
+        "retain-both-colors"
+      ],
+      "geometry": [
+        "paired-incidence",
+        "self-description"
+      ],
+      "name": "paired-form",
+      "outcome": "paired-landing"
+    },
+    {
+      "commitments": [
+        "joint-interpretation",
+        "retain-both-colors"
+      ],
+      "geometry": [
+        "paired-incidence",
+        "self-description"
+      ],
+      "name": "paired-self-read",
+      "outcome": "paired-landing"
+    },
+    {
+      "commitments": [
+        "not-reconciled",
+        "retain-both-colors"
+      ],
+      "geometry": [
+        "escape",
+        "paired-incidence"
+      ],
+      "name": "unresolved-escape",
+      "outcome": null
+    }
+  ],
+  "schema": "hyperorder.paired-continuation/1"
+}

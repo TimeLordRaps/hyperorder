@@ -1,6 +1,6 @@
 {
   "field_id": "hyperorder",
-  "contract_version": "0.1.0",
+  "contract_version": "0.2.0",
   "classification": "FRAME",
   "module": "hyperorder",
   "exports": [
@@ -13,16 +13,24 @@
     "Precedes",
     "Incomparable",
     "Order",
-    "compare"
+    "compare",
+    "Position", "Continuation", "DichromeFrame", "Obstruction", "FrameInspection",
+    "Evidence", "PathWitness", "FiltrationReport", "ReproductionObstruction",
+    "ClosureReport", "DivergenceFamily", "FamilyConvergenceReport", "inspect_frame",
+    "follow_path", "compose_paths", "filtration", "closure", "converge_families",
+    "describe", "read_description", "verify_description", "example_frame", "to_json"
   ],
-  "scope": "Hyperorder's declared sense, the dichrome closed into one form, held apart from plain order; and the ordinal bookkeeping a finite claim about order must pass: named positions, declared relations, five verdicts, and a missing relation read as UNKNOWN.",
+  "scope": "Substantive paired structural-semantic continuation research, exact two-color transport, productive continuation filtration and mutual path reproduction, retained path composition and return, universal stabilization of distinct divergence-family profiles, operational self-description, and ordinal bookkeeping. Tyler's convergence direction remains distinct from a claim to native dichrome formation.",
   "exclusions": [
-    "This module does not implement hyperorder; the dichrome and its closure are Hypergrammar's.",
+    "The finite operations do not produce native dichrome formation; native adequacy and self-closing hypertopology derivations remain OPEN.",
     "'order' is not aliased to 'hyperorder'; whether the order chaos realigns into is hyperorder is not decided.",
     "No grounding of hyperorder in Hyperethics, or in anything else, is assumed.",
-    "No position is a number, and no clock, index, duration, or step count is used; ordering among reality presentations belongs to Hypertime.",
-    "No operational target, attractor, or stable state is called hyperorder.",
+    "No position is a number or physical time coordinate; finite refinement/admission rounds measure computation. Ordering among reality presentations belongs to Hypertime.",
+    "The family stabilization mechanism develops Tyler's operational association; its stable class is not equated with full native hyperorder.",
     "No physical, cosmological, or ethical claim is established."
   ],
-  "verifier_status": "NOT_CHECKED"
+  "verifier_status": "NOT_CHECKED",
+  "implementation_modules": ["hyperorder", "dichrome"],
+  "runtime": "Python >=3.12; standard library",
+  "native_adequacy": "OPEN"
 }
